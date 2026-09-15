@@ -1,9 +1,17 @@
-public class Engine
+public class Engine extends Parts
 {
-    String type;
-
-    public Engine(String type)
+    String variant;
+    boolean electric;
+    
+    public Engine(boolean electric, String variant)
     {
-        this.type = type;
+        super("Engine");
+        this.variant = variant;
+        this.electric = electric;
+    }
+
+    public String toString()
+    {
+        return super.toString() + "\nVariant: " + variant + "\nElectric? " + electric;
     }
 }
