@@ -1,7 +1,7 @@
 public class Engine extends Parts
 {
-    String variant;
-    boolean electric;
+    private String variant;
+    private boolean electric;
     
     public Engine(boolean electric, String variant)
     {
