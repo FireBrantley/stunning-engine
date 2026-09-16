@@ -1,3 +1,5 @@
+package src.vehicles;
+
 public class Train extends Vehicle
 {
     private String model;

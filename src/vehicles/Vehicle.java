@@ -1,3 +1,5 @@
+package src.vehicles;
+
 public class Vehicle
 {
     private String type;

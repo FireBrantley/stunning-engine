@@ -1,3 +1,5 @@
+package src.parts;
+
 public class Wheel extends Parts
 {
     private int diameter;

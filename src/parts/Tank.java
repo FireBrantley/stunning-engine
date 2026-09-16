@@ -1,3 +1,5 @@
+package src.parts;
+
 public class Tank extends Parts
 {
     private int capacity;

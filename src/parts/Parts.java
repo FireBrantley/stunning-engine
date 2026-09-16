@@ -1,3 +1,5 @@
+package src.parts;
+
 public class Parts
 {
     private String type;
