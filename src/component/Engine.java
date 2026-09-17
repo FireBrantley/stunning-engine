@@ -6,6 +6,8 @@ package src.component;
  * related to engines, such as its variant and whether or not it is electric.
  * 
  * @author FireBrantley
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Engine extends Component
 {
@@ -24,6 +26,7 @@ public class Engine extends Component
      * 
      * @param electric Indicates if the engine is electric.
      * @param variant The variant of the engine to construct.
+     * @since 1.0.0
      */
     public Engine(boolean electric, String variant)
     {
@@ -39,6 +42,7 @@ public class Engine extends Component
      * this method provides a more meaningful description of the engine.
      * 
      * @return A string representation of the engine.
+     * @since 1.0.0
      */
     public String toString()
     {
@@ -49,6 +53,7 @@ public class Engine extends Component
      * Returns a brief summary of the engine.
      * 
      * @return A string containing a brief summary of the engine.
+     * @since 1.0.0
      */
     public String summary()
     {

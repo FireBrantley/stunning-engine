@@ -6,6 +6,8 @@ package src.component;
  * related to wheels, such as its diameter and unit of measurement.
  * 
  * @author FireBrantley
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Wheel extends Component
 {
@@ -30,6 +32,7 @@ public class Wheel extends Component
      * More specifically, the unit is set to "in." and the singular form is also set to "in.".
      * 
      * @param diameter The diameter of the wheel to construct.
+     * @since 1.0.0
      */
     public Wheel(int diameter)
     {
@@ -45,6 +48,7 @@ public class Wheel extends Component
      * 
      * @param diameter The diameter of the wheel to construct.
      * @param unit The unit of measurement for the wheel's diameter.
+     * @since 1.0.0
      */
     public Wheel(int diameter, String unit)
     {
@@ -63,6 +67,7 @@ public class Wheel extends Component
      * this method provides a more meaningful description of the wheel.
      * 
      * @return A string representation of the wheel.
+     * @since 1.0.0
      */
     public String toString()
     {
@@ -73,6 +78,7 @@ public class Wheel extends Component
      * Returns a brief summary of the wheel.
      * 
      * @return A string containing a brief summary of the wheel.
+     * @since 1.0.0
      */
     public String summary()
     {

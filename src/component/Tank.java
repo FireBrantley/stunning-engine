@@ -6,6 +6,8 @@ package src.component;
  * related to tanks, such as its capacity, unit of measurement, and what it stores.
  * 
  * @author FireBrantley
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Tank extends Component
 {
@@ -35,6 +37,7 @@ public class Tank extends Component
      * @param capacity The capacity of the tank to construct.
      * @param unit The unit of measurement for the tank's capacity.
      * @param storing The type of substance the tank is designed to store.
+     * @since 1.0.0
      */
     public Tank(int capacity, String unit, String storing)
     {
@@ -54,6 +57,7 @@ public class Tank extends Component
      * this method provides a more meaningful description of the tank.
      * 
      * @return A string representation of the tank.
+     * @since 1.0.0
      */
     public String toString()
     {
@@ -64,6 +68,7 @@ public class Tank extends Component
      * Returns a brief summary of the tank.
      * 
      * @return A string containing a brief summary of the tank.
+     * @since 1.0.0
      */
     public String summary()
     {

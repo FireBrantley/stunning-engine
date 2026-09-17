@@ -5,6 +5,8 @@ package src.component;
  * This class serves as a base class for specific types of components such as an Engine.
  * 
  * @author FireBrantley
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Component
 {
@@ -17,6 +19,7 @@ public class Component
      * Constructs a Component with the specified type.
      * 
      * @param type The type of the component to construct.
+     * @since 1.0.0
      */
     public Component(String type)
     {
@@ -30,6 +33,7 @@ public class Component
      * this method provides a more meaningful description of the component.
      * 
      * @return A string representation of the component.
+     * @since 1.0.0
      */
     public String toString()
     {
@@ -40,6 +44,7 @@ public class Component
      * Returns a brief summary of the component.
      * 
      * @return A string containing a brief summary of the component.
+     * @since 1.0.0
      */
     public String summary()
     {
