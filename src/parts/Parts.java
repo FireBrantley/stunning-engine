@@ -13,4 +13,9 @@ public class Parts
     {
         return "Type: " + type;
     }
+
+    public String summary()
+    {
+        return type;
+    }
 }

@@ -16,4 +16,10 @@ public class Engine extends Parts
     {
         return super.toString() + "\nVariant: " + variant + "\nElectric? " + electric;
     }
+
+    public String summary()
+    {
+        return variant + " engine";
+    }
+
 }

@@ -26,8 +26,16 @@ public class Main
         System.out.println();
         System.out.println(vehicle);
 
+        Vehicle listedVehicle = new Vehicle("Vehicle with Parts", part, steam, wheel, tank);
+        System.out.println();
+        System.out.println(listedVehicle);
+
         Train train = new Train("Freight");
         System.out.println();
         System.out.println(train);
+
+        Train listedTrain = new Train("Passenger", part, steam, wheel, tank);
+        System.out.println();
+        System.out.println(listedTrain);
     }
 }

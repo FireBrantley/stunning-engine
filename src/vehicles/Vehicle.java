@@ -31,6 +31,27 @@ public class Vehicle
 
     public String toString()
     {
-        return "Type: " + type + "\nBuilt From: " + builtFrom;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Type: ").append(type).append("\nBuilt From: [");
+
+        if (builtFrom.isEmpty())
+        {
+            sb.append("(none)");
+        }
+        else
+        {
+            for (int i = 0; i < builtFrom.size(); i++)
+            {
+                if (i > 0)
+                {
+                    sb.append(", ");
+                }
+                sb.append(builtFrom.get(i).summary());
+            }
+        }
+
+        sb.append("]");
+
+        return sb.toString();
     }
 }
