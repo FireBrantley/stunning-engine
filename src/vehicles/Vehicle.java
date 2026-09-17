@@ -2,28 +2,28 @@ package src.vehicles;
 
 import java.util.ArrayList;
 
-import src.parts.Parts;
+import src.component.Component;
 
 public class Vehicle
 {
     private String type;
-    private ArrayList<Parts> builtFrom = new ArrayList<Parts>();
+    private ArrayList<Component> builtFrom = new ArrayList<Component>();
 
     public Vehicle(String type)
     {
         this.type = type;
     }
 
-    public Vehicle(String type, Parts... part)
+    public Vehicle(String type, Component... part)
     {
         this.type = type;
-        for (Parts p : part)
+        for (Component p : part)
         {
             builtFrom.add(p);
         }
     }
 
-    public Vehicle(String type, ArrayList<Parts> builtFrom)
+    public Vehicle(String type, ArrayList<Component> builtFrom)
     {
         this.type = type;
         this.builtFrom = builtFrom;

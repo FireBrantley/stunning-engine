@@ -2,7 +2,7 @@ package src.vehicles;
 
 import java.util.ArrayList;
 
-import src.parts.Parts;
+import src.component.Component;
 
 public class Train extends Vehicle
 {
@@ -14,13 +14,13 @@ public class Train extends Vehicle
         this.model = model;
     }
 
-    public Train(String model, Parts... part)
+    public Train(String model, Component... part)
     {
         super("Train", part);
         this.model = model;
     }
 
-    public Train(String model, ArrayList<Parts> builtFrom)
+    public Train(String model, ArrayList<Component> builtFrom)
     {
         super("Train", builtFrom);
         this.model = model;
