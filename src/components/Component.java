@@ -5,7 +5,7 @@ package src.components;
  * This class serves as a base class for specific types of components such as an Engine.
  * 
  * @author FireBrantley
- * @version 1.1.0
+ * @version 1.2.0
  * @since 1.0.0
  */
 public class Component

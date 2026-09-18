@@ -10,7 +10,7 @@ import src.components.Component;
  * It contains attributes related to the vehicle's type and the components it is built from.
  * 
  * @author FireBrantley
- * @version 1.1.0
+ * @version 1.2.0
  * @since 1.0.0
  */
 public class Vehicle

@@ -6,7 +6,7 @@ package src.components;
  * related to tanks, such as its capacity, unit of measurement, and what it stores.
  * 
  * @author FireBrantley
- * @version 1.1.0
+ * @version 1.2.0
  * @since 1.0.0
  */
 public class Tank extends Component
@@ -72,8 +72,8 @@ public class Tank extends Component
      * @since 1.0.0
      */
     @Override
-    public String summary() {
-        String unitLabel = (capacity == 1) ? singularUnit : unit;
-        return capacity + " " + unitLabel + " tank";
+    public String summary()
+    {
+        return capacity + " " + singularUnit + " tank";
     }
 }

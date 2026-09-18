@@ -6,7 +6,7 @@ package src.components;
  * related to wheels, such as its diameter and unit of measurement.
  * 
  * @author FireBrantley
- * @version 1.1.0
+ * @version 1.2.0
  * @since 1.0.0
  */
 public class Wheel extends Component
