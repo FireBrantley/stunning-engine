@@ -1,4 +1,4 @@
-package src.component;
+package src.components;
 
 /**
  * Represents the wheel component of a vehicle. 
@@ -6,7 +6,7 @@ package src.component;
  * related to wheels, such as its diameter and unit of measurement.
  * 
  * @author FireBrantley
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Wheel extends Component
@@ -69,6 +69,7 @@ public class Wheel extends Component
      * @return A string representation of the wheel.
      * @since 1.0.0
      */
+    @Override
     public String toString()
     {
         return super.toString() + "\nDiameter: " + diameter + " " + unit;
@@ -80,6 +81,7 @@ public class Wheel extends Component
      * @return A string containing a brief summary of the wheel.
      * @since 1.0.0
      */
+    @Override
     public String summary()
     {
         return diameter + " " + singularUnit + " wheel";

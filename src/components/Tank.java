@@ -1,4 +1,4 @@
-package src.component;
+package src.components;
 
 /**
  * Represents the tank component of a vehicle. 
@@ -6,7 +6,7 @@ package src.component;
  * related to tanks, such as its capacity, unit of measurement, and what it stores.
  * 
  * @author FireBrantley
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Tank extends Component
@@ -59,6 +59,7 @@ public class Tank extends Component
      * @return A string representation of the tank.
      * @since 1.0.0
      */
+    @Override
     public String toString()
     {
         return super.toString() + "\nCapacity: " + capacity + " " + unit + "\nStoring: " + storing;
@@ -70,8 +71,9 @@ public class Tank extends Component
      * @return A string containing a brief summary of the tank.
      * @since 1.0.0
      */
-    public String summary()
-    {
-        return capacity + " " + singularUnit + " tank";
+    @Override
+    public String summary() {
+        String unitLabel = (capacity == 1) ? singularUnit : unit;
+        return capacity + " " + unitLabel + " tank";
     }
 }

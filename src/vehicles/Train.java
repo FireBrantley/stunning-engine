@@ -2,7 +2,7 @@ package src.vehicles;
 
 import java.util.ArrayList;
 
-import src.component.Component;
+import src.components.Component;
 
 /**
  * Represents a train vehicle. 
@@ -10,7 +10,7 @@ import src.component.Component;
  * related to trains, such as its model.
  * 
  * @author FireBrantley
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Train extends Vehicle
@@ -72,6 +72,7 @@ public class Train extends Vehicle
      * @return A string representation of the train.
      * @since 1.0.0
      */
+    @Override
     public String toString()
     {
         return super.toString() + "\nModel: " + model;

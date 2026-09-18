@@ -1,11 +1,11 @@
-package src.component;
+package src.components;
 
 /**
  * Represents a component of a vehicle. 
  * This class serves as a base class for specific types of components such as an Engine.
  * 
  * @author FireBrantley
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Component

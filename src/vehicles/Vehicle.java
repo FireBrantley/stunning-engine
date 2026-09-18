@@ -2,7 +2,7 @@ package src.vehicles;
 
 import java.util.ArrayList;
 
-import src.component.Component;
+import src.components.Component;
 
 /**
  * Represents a vehicle. 
@@ -10,7 +10,7 @@ import src.component.Component;
  * It contains attributes related to the vehicle's type and the components it is built from.
  * 
  * @author FireBrantley
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Vehicle

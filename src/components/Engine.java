@@ -1,4 +1,4 @@
-package src.component;
+package src.components;
 
 /**
  * Represents the engine component of a vehicle. 
@@ -6,7 +6,7 @@ package src.component;
  * related to engines, such as its variant and whether or not it is electric.
  * 
  * @author FireBrantley
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Engine extends Component
@@ -44,6 +44,7 @@ public class Engine extends Component
      * @return A string representation of the engine.
      * @since 1.0.0
      */
+    @Override
     public String toString()
     {
         return super.toString() + "\nVariant: " + variant + "\nElectric? " + electric;
@@ -55,6 +56,7 @@ public class Engine extends Component
      * @return A string containing a brief summary of the engine.
      * @since 1.0.0
      */
+    @Override
     public String summary()
     {
         return variant + " engine";
