@@ -2,6 +2,15 @@ package src.vehicles;
 
 import src.components.Component;
 
+/**
+ * Represents a car, which is a specific type of vehicle.
+ * This class extends the Vehicle class and adds attributes specific to cars,
+ * such as brand, model, year, and mileage.
+ * 
+ * @author FireBrantley
+ * @version 1.3.0
+ * @since 1.3.0
+ */
 public class Car extends Vehicle
 {
     private static int currentYear = 2026;
