@@ -10,64 +10,35 @@ import src.components.Component;
  * It contains attributes related to the vehicle's type and the components it is built from.
  * 
  * @author FireBrantley
- * @version 1.3.0
+ * @version 2.0.0
  * @since 1.0.0
  */
 public class Vehicle
 {
     /**
      * The type of the vehicle (e.g., "Car", "Truck", "Train").
+     * @since 1.0.0
      */
     private String type;
 
     /**
      * A list of components that the vehicle is built from.
-     */
-    private ArrayList<Component> builtFrom = new ArrayList<Component>();
-
-    /**
-     * Constructs a Vehicle with the specified type.
-     * Does not specify any components that the vehicle is built from.
-     * 
-     * @param type The type of the vehicle to construct.
      * @since 1.0.0
      */
-    public Vehicle(String type)
-    {
-        this.type = type;
-    }
+    private ArrayList<Component> builtFrom;
 
     /**
-     * Constructs a Vehicle with the specified type and components.
-     * Allows for flexibility in specifying the components that the vehicle is built from,
-     * which can be provided as multiple Component objects.
-     * 
-     * @param type The type of the vehicle to construct.
-     * @param part The components that the vehicle is built from.
-     * @since 1.0.0
+     * Package-private constructor used by VehicleBuilder to create Vehicle instances.
+     * This constructor should not be called directly; use {@link VehicleBuilder}
+     * to construct Vehicle instances.
+     *
+     * @param builder The VehicleBuilder containing the vehicle configuration.
+     * @since 2.0.0
      */
-    public Vehicle(String type, Component... part)
+    Vehicle(VehicleBuilder builder)
     {
-        this.type = type;
-        for (Component p : part)
-        {
-            builtFrom.add(p);
-        }
-    }
-
-    /**
-     * Constructs a Vehicle with the specified type and a list of components.
-     * Allows for flexibility in specifying the components that the vehicle is built from,
-     * which can be provided as an ArrayList of Component objects.
-     * 
-     * @param type The type of the vehicle to construct.
-     * @param builtFrom The list of components that the vehicle is built from.
-     * @since 1.0.0
-     */
-    public Vehicle(String type, ArrayList<Component> builtFrom)
-    {
-        this.type = type;
-        this.builtFrom = builtFrom;
+        this.type = builder.type;
+        this.builtFrom = new ArrayList<Component>(builder.builtFrom);
     }
 
     /**

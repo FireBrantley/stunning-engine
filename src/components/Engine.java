@@ -6,40 +6,49 @@ package src.components;
  * related to engines, such as its variant and whether or not it is electric.
  * 
  * @author FireBrantley
- * @version 1.3.0
+ * @version 2.0.0
  * @since 1.0.0
  */
 public class Engine extends Component
 {
     /**
+     * Indicates whether or not the engine is electric.
+     * @since 1.0.0
+     */
+    private boolean electric;
+
+    /**
      * The variant of the engine (e.g., "V6", "V8", "Inline-4").
+     * @since 1.0.0
      */
     private String variant;
 
     /**
-     * Indicates whether or not the engine is electric.
+     * The type of fuel the engine uses (e.g., "gasoline", "diesel", "electricity").
+     * @since 2.0.0
      */
-    private boolean electric;
+    private String fuelType;
     
     /**
-     * Constructs an Engine with the specified variant and electric status.
+     * Package-private constructor used by EngineBuilder to create Engine instances.
+     * This constructor should not be called directly; use {@link EngineBuilder} instead.
      * 
-     * @param electric Indicates if the engine is electric.
-     * @param variant The variant of the engine to construct.
-     * @since 1.0.0
+     * @param builder The EngineBuilder containing the engine configuration.
+     * @since 2.0.0
      */
-    public Engine(boolean electric, String variant)
+    Engine(EngineBuilder builder)
     {
         super("Engine");
-        this.variant = variant;
-        this.electric = electric;
+        this.electric = builder.electric;
+        this.variant = builder.variant;
+        this.fuelType = builder.fuelType;
     }
 
     /**
      * Returns a string representation of the engine.
-     * Including its variant, electric status, and type from the parent class.
-     * Instead of returning the default object representation, 
-     * this method provides a more meaningful description of the engine.
+     * This includes all of its fields/properties,
+     * instead of returning the default object representation 
+     * providing a more meaningful description of the engine.
      * 
      * @return A string representation of the engine.
      * @since 1.0.0
@@ -47,11 +56,13 @@ public class Engine extends Component
     @Override
     public String toString()
     {
-        return super.toString() + "\nVariant: " + variant + "\nElectric? " + electric;
+        return super.toString() + "\nVariant: " + variant + "\nElectric? " + electric + "\nFuel Type: " + fuelType;
     }
 
     /**
      * Returns a brief summary of the engine.
+     * This summary will include all of the engine's fields/properties, 
+     * providing a concise overview of its characteristics.
      * 
      * @return A string containing a brief summary of the engine.
      * @since 1.0.0
@@ -59,7 +70,7 @@ public class Engine extends Component
     @Override
     public String summary()
     {
-        return variant + " engine";
+        return variant + " engine that takes " + fuelType + " and is " + (electric ? "electric." : "not electric.");
     }
 
 }

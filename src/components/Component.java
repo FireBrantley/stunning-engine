@@ -5,13 +5,14 @@ package src.components;
  * This class serves as a base class for specific types of components such as an Engine.
  * 
  * @author FireBrantley
- * @version 1.3.0
+ * @version 2.0.0
  * @since 1.0.0
  */
 public class Component
 {
     /**
      * The type of the component (e.g., "Engine", "Wheel", "Door").
+     * @since 1.0.0
      */
     private String type;
 

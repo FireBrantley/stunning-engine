@@ -1,66 +1,34 @@
 package src.vehicles;
 
-import java.util.ArrayList;
-
-import src.components.Component;
-
 /**
  * Represents a train vehicle. 
  * This class extends the Vehicle class and adds specific attributes 
  * related to trains, such as its model.
  * 
  * @author FireBrantley
- * @version 1.3.0
+ * @version 2.0.0
  * @since 1.0.0
  */
 public class Train extends Vehicle
 {
     /**
      * The model of the train.
+     * @since 1.0.0
      */
     private String model;
 
     /**
-     * Constructs a Train with the specified model.
-     * Does not specify any components that the train is built from.
-     * 
-     * @param model The model of the train to construct.
-     * @since 1.0.0
+     * Package-private constructor used by TrainBuilder to create Train instances.
+     * This constructor should not be called directly; use {@link TrainBuilder}
+     * to construct Train instances.
+     *
+     * @param builder The TrainBuilder containing the train configuration.
+     * @since 2.0.0
      */
-    public Train(String model)
+    Train(TrainBuilder builder)
     {
-        super("Train");
-        this.model = model;
-    }
-
-    /**
-     * Constructs a Train with the specified model and components.
-     * Allows for flexibility in specifying the components that the train is built from,
-     * which can be provided as multiple Component objects.
-     * 
-     * @param model The model of the train to construct.
-     * @param part The components that the train is built from.
-     * @since 1.0.0
-     */
-    public Train(String model, Component... part)
-    {
-        super("Train", part);
-        this.model = model;
-    }
-
-    /**
-     * Constructs a Train with the specified model and a list of components.
-     * Allows for flexibility in specifying the components that the train is built from,
-     * which can be provided as an ArrayList of Component objects.
-     * 
-     * @param model The model of the train to construct.
-     * @param builtFrom The list of components that the train is built from.
-     * @since 1.0.0
-     */
-    public Train(String model, ArrayList<Component> builtFrom)
-    {
-        super("Train", builtFrom);
-        this.model = model;
+        super(builder);
+        this.model = builder.model;
     }
 
     /**

@@ -4,50 +4,47 @@ package src.components;
  * Represents the tank component of a vehicle. 
  * This class extends the Component class and adds specific attributes 
  * related to tanks, such as its capacity, unit of measurement, and what it stores.
+ * The component type defaults to "Tank" but can be customized through {@link TankBuilder}
+ * (e.g., "Barrel").
  * 
  * @author FireBrantley
- * @version 1.3.0
+ * @version 2.0.0
  * @since 1.0.0
  */
 public class Tank extends Component
 {
     /**
      * The capacity of the tank.
+     * @since 1.0.0
      */
     private int capacity;
 
     /**
      * The unit of measurement for the tank's capacity (e.g., "liters", "gallons").
+     * @since 1.0.0
      */
     private String unit;
 
     /**
      * The type of substance the tank is designed to store (e.g., "fuel", "water").
+     * @since 1.0.0
      */
     private String storing;
 
     /**
-     * The singular form of the unit of measurement for the tank's capacity.
-     */
-    private String singularUnit; 
-
-    /**
-     * Constructs a Tank with the specified capacity, unit of measurement, and substance it stores.
+     * Package-private constructor used by TankBuilder to create Tank instances.
+     * This constructor should not be called directly; use {@link TankBuilder} 
+     * to construct Tank instances.
      * 
-     * @param capacity The capacity of the tank to construct.
-     * @param unit The unit of measurement for the tank's capacity.
-     * @param storing The type of substance the tank is designed to store.
-     * @since 1.0.0
+     * @param builder The TankBuilder containing the tank configuration.
+     * @since 2.0.0
      */
-    public Tank(int capacity, String unit, String storing)
+    Tank(TankBuilder builder)
     {
-        super("Tank");
-        this.capacity = capacity;
-        this.unit = unit.toLowerCase();
-        this.storing = storing;
-        this.singularUnit = (unit != null && unit.toLowerCase().endsWith("s")) 
-                            ? unit.toLowerCase().substring(0, unit.length() - 1) 
-                            : unit.toLowerCase();
+        super(builder.type);
+        this.capacity = builder.capacity;
+        this.unit = builder.unit;
+        this.storing = builder.storing;
     }
 
     /**
@@ -74,6 +71,6 @@ public class Tank extends Component
     @Override
     public String summary()
     {
-        return capacity + " " + singularUnit + " tank";
+        return "A " + super.summary().toLowerCase() + " with a capacity of " + capacity + " " + unit;
     }
 }
